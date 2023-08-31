@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/cssLogo.png">
+
+    <script
+      src="https://kit.fontawesome.com/d77a2ed1ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../javascript/script.js" defer></script>
+    <title>Display-flex</title>
+  </head>
+  <body>
+    <button id="themeToggle">Alternar Tema</button>
+    <div class="blur">
+      <div class="backgroundTransparent">
+        <div class="comfirm-delet-all">
+          <h4>Você tem certeza ?</h4>
+          <div class="comfirm-delete-y-n">
+            <button value="true" class="yes">Sim</button>
+            <button value="false" class="no">Não</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top">
+      <div class="top-flex">
+        <h4>Display Flex</h4>
+      </div>
+      <div class="top-preview">
+        <h4>Preview</h4>
+      </div>
+    </div>
+
+    <div class="container">
+      <aside>
+        <div class="sidebar">
+          <div class="sidebar-containers">
+            <button class="sidebar-btn">
+              Flex-Direction
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="sidebar-btns-options">
+              <button
+                class="sidebar-btn-options flex-direction active"
+                value="row"
+              >
+                row
+              </button>
+              <button
+                class="sidebar-btn-options flex-direction"
+                value="row-reverse"
+              >
+                row-reverse
+              </button>
+              <button class="sidebar-btn-options flex-direction" value="column">
+                column
+              </button>
+              <button
+                class="sidebar-btn-options flex-direction"
+                value="column-reverse"
+              >
+                column-reverse
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-containers">
+            <button class="sidebar-btn">
+              Flex-Wrap <span><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="sidebar-btns-options">
+              <button class="sidebar-btn-options flex-wrap" value="nowrap">
+                nowrap
+              </button>
+              <button class="sidebar-btn-options flex-wrap active" value="wrap">
+                wrap
+              </button>
+              <button
+                class="sidebar-btn-options flex-wrap"
+                value="wrap-reverse"
+              >
+                wrap-reverse
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-containers">
+            <button class="sidebar-btn">
+              Justify-Content
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="sidebar-btns-options">
+              <button
+                class="sidebar-btn-options justify-content"
+                value="flex-start"
+              >
+                flex-start
+              </button>
+              <button
+                class="sidebar-btn-options justify-content"
+                value="flex-end"
+              >
+                flex-end
+              </button>
+              <button
+                class="sidebar-btn-options justify-content"
+                value="center"
+              >
+                center
+              </button>
+              <button
+                class="sidebar-btn-options justify-content active"
+                value="space-between"
+              >
+                space-between
+              </button>
+              <button
+                class="sidebar-btn-options justify-content"
+                value="space-around"
+              >
+                space-around
+              </button>
+              <button
+                class="sidebar-btn-options justify-content"
+                value="space-evenly"
+              >
+                space-evenly
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-containers">
+            <button class="sidebar-btn">
+              Align-Items
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="sidebar-btns-options">
+              <button
+                class="sidebar-btn-options align-items"
+                value="flex-start"
+              >
+                flex-start
+              </button>
+              <button class="sidebar-btn-options align-items" value="flex-end">
+                flex-end
+              </button>
+              <button
+                class="sidebar-btn-options align-items active"
+                value="center"
+              >
+                center
+              </button>
+              <button class="sidebar-btn-options align-items" value="baseline">
+                baseline
+              </button>
+              <button class="sidebar-btn-options align-items" value="stretch">
+                stretch
+              </button>
+            </div>
+          </div>
+
+          <!-- ----------------------------- ranges ---------------------------- -->
+          <div class="range-containers">
+            <button class="sidebar-btn">
+              Flex<span><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="sidebar-btns-options">
+              <div class="range-and-label">
+                <label for="flex-grow">flex-grow</label>
+                <div class="show-px">
+                  <input
+                    min="0"
+                    max="10"
+                    value="0"
+                    type="range"
+                    class="range"
+                    name="flex-grow"
+                    id="flex-grow"
+                  />
+                  <div class="show-px-number" id="show-px-number-flex-grow">
+                    <span>0</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="range-and-label">
+                <label for="flex-shrink">flex-shrink</label>
+                <div class="show-px">
+                  <input
+                    min="0"
+                    max="10"
+                    value="0"
+                    type="range"
+                    class="range"
+                    name="flex-shrink"
+                    id="flex-shrink"
+                  />
+                  <div class="show-px-number" id="show-px-number-flex-shrink">
+                    <span>0</span>
+                  </div>
+                </div>
+
+                <div class="range-and-label">
+                  <label for="flex-basis">flex-basis</label>
+                  <div class="show-px">
+                    <input
+                      min="0"
+                      max="10"
+                      value="0"
+                      type="range"
+                      class="range"
+                      name="flex-basis"
+                      id="flex-basis"
+                    />
+                    <div class="show-px-number" id="show-px-number-flex-basis">
+                      <span>0</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="range-containers">
+                  <button class="sidebar-btn">
+                    Preview<span><i class="fa-solid fa-chevron-down"></i></span>
+                  </button>
+                  <div class="sidebar-btns-options">
+                    <div class="range-and-label">
+                      <label for="width">width</label>
+                      <div class="show-px">
+                        <input
+                          min="20"
+                          max="100"
+                          value="100"
+                          type="range"
+                          class="range"
+                          name="width"
+                          id="width"
+                        />
+                        <div class="show-px-number" id="show-px-number-width">
+                          <span>100</span>%
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="range-and-label">
+                      <label for="height">min-height</label>
+                      <div class="show-px">
+                        <input
+                          min="100"
+                          max="2000"
+                          value="250"
+                          type="range"
+                          class="range"
+                          name="height"
+                          id="height"
+                        />
+                        <div class="show-px-number" id="show-px-number-height">
+                          <span>250</span>px
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="range-and-label">
+                      <label for="gap">gap</label>
+                      <div class="show-px">
+                        <input
+                          min="1"
+                          max="50"
+                          value="10"
+                          type="range"
+                          class="range"
+                          name="gap"
+                          id="gap"
+                        />
+                        <div class="show-px-number" id="show-px-number-gap">
+                          <span>10</span>px
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="range-containers">
+                    <button class="sidebar-btn">
+                      Padding<span
+                        ><i class="fa-solid fa-chevron-down"></i
+                      ></span>
+                    </button>
+                    <div class="sidebar-btns-options">
+                      <div class="range-and-label">
+                        <label for="padding-top">padding-top</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="100"
+                            value="1"
+                            type="range"
+                            class="range"
+                            name="padding-top"
+                            id="padding-top"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-padding-top"
+                          >
+                            <span>1</span>px
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="range-and-label">
+                        <label for="padding-bottom">padding-bottom</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="100"
+                            value="1"
+                            type="range"
+                            class="range"
+                            name="padding-bottom"
+                            id="padding-bottom"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-padding-bottom"
+                          >
+                            <span>1</span>px
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="range-and-label">
+                        <label for="padding-left">padding-left</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="100"
+                            value="1"
+                            type="range"
+                            class="range"
+                            name="padding-left"
+                            id="padding-left"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-padding-left"
+                          >
+                            <span>1</span>px
+                          </div>
+                        </div>
+                      </div>
+                      <div class="range-and-label">
+                        <label for="padding-right">padding-right</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="100"
+                            value="1"
+                            type="range"
+                            class="range"
+                            name="padding-right"
+                            id="padding-right"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-padding-right"
+                          >
+                            <span>1</span>px
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="range-containers">
+                    <button class="sidebar-btn">
+                      Margin<span
+                        ><i class="fa-solid fa-chevron-down"></i
+                      ></span>
+                    </button>
+                    <div class="sidebar-btns-options">
+                      <div class="range-and-label">
+                        <label for="margin-top">margin-top</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="30"
+                            value="0"
+                            type="range"
+                            class="range"
+                            name="margin-top"
+                            id="margin-top"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-margin-top"
+                          >
+                            <span>0</span>px
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="range-and-label">
+                        <label for="margin-bottom">margin-bottom</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="30"
+                            value="0"
+                            type="range"
+                            class="range"
+                            name="margin-bottom"
+                            id="margin-bottom"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-margin-bottom"
+                          >
+                            <span>0</span>px
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="range-and-label">
+                        <label for="margin-left">margin-left</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="30"
+                            value="0"
+                            type="range"
+                            class="range"
+                            name="margin-left"
+                            id="margin-left"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-margin-left"
+                          >
+                            <span>0</span>px
+                          </div>
+                        </div>
+                      </div>
+                      <div class="range-and-label">
+                        <label for="margin-right">margin-right</label>
+                        <div class="show-px">
+                          <input
+                            min="0"
+                            max="30"
+                            value="0"
+                            type="range"
+                            class="range"
+                            name="margin-right"
+                            id="margin-right"
+                          />
+                          <div
+                            class="show-px-number"
+                            id="show-px-number-margin-right"
+                          >
+                            <span>0</span>px
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <div class="sticky">
+          <div class="preview-box">
+            <div class="preview">
+              <div class="box editing">
+                <span class="delete">x</span>
+              </div>
+              <div class="box editing">
+                <span class="delete">x</span>
+              </div>
+            </div>
+          </div>
+          <div class="input-new-box">
+            <div class="input-above">
+              <input
+                type="text"
+                placeholder="inserir um pouquinho de texto"
+                id="text-input"
+              />
+            </div>
+            <div class="input-bellow">
+              <button id="add">Adicionar</button>
+              <button id="rest">Apagar tudo</button>
+            </div>
+          </div>
+          <div class="inputs-range-box"></div>
+        </div>
+      </main>
+    </div>
+   
+    <footer>
+      <div class="footer-contents"></div>
+      <div class="footer-copyright">
+        <p>Copyright Junior.rx22 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>
